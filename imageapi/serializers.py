@@ -45,11 +45,13 @@ class ImageSerializer(serializers.HyperlinkedModelSerializer):
         if not ServicePlan.objects.get(pk=
                                        Profile.objects.get(user=self.context['request'].user).plan.id
                                        ).canLinkOrig:
-            if 'img' not in self.Meta.exclude:
-                self.Meta.exclude += ['img']
+            # if 'img' not in self.Meta.exclude:
+            #     self.Meta.exclude += ['img']
+            self.Meta.extra_kwargs = {'img': {'write_only': True}}
         else:
-            if 'img' in self.Meta.exclude:
-                self.Meta.exclude.remove('img')
+            # if 'img' in self.Meta.exclude:
+            #     self.Meta.exclude.remove('img')
+            self.Meta.extra_kwargs = {}
 
         if not ServicePlan.objects.get(pk=
                                        Profile.objects.get(user=self.context['request'].user).plan.id
