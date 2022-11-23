@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-bh9(4h8)_b8a02lbd%4sck*2m09ep!9r@-t&(w^of8awpj!nu_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['imageapi.pythonanywhere.com', 'localhost']
 
 
 # Application definition
