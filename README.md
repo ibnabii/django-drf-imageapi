@@ -1,4 +1,7 @@
 # Image API
+![python](./docs/python.svg)
+![django](./docs/django-icon.svg)
+![sqlite](./docs/sqlite.svg)
 ## Installation
 - create python virtual environment
 - execute following commands in terminal:
